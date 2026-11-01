@@ -69,5 +69,69 @@ The environment supports hands-on learning and experimentation with various cybe
 ---
 ## 🏗️ Lab Architecture
 
-![](<img width="901" height="413" alt="0" src="https://github.com/user-attachments/assets/2fc60fa2-d52e-4afa-ad52-7aa8543ca384" />
-)
+![](0.PNG)
+
+Additional target machines can be added to the same virtual network in future projects.
+
+## ⚙️ Virtual Lab Specifications
+
+The following table outlines the hardware, software, and network settings used to build the virtual cybersecurity environment.
+
+| Component                    | Configuration          |
+| :--------------------------- | :--------------------- |
+| 💻 Host Operating System     | Windows 10             |
+| 🧠 Available RAM             | 8 GB                   |
+| ⚡ Processor                  | Intel Core i5          |
+| 📦 Virtualization Platform   | VirtualBox 7.2         |
+| 🐉 Guest Operating System    | Kali Linux 2026.2      |
+| 💾 Allocated VM Memory       | 2048 MB (2 GB)         |
+| 🌐 Network Configuration     | NAT Network            |
+| 📡 Private Network           | `10.0.0.0/24`          |
+| 🖥️ Kali Linux IP            | `10.0.0.0/24`          |
+| 🚪 Default Gateway           | `10.0.0.1`             |
+| 🌍 DNS Configuration         | `10.0.0.1`             |
+| 🔮 Reserved VM Address Range | `10.0.0.3 – 10.0.0.99` |
+
+---
+
+# 🪜 Virtual Lab Installation & Configuration
+
+This section documents the installation and initial configuration steps required to establish the cybersecurity lab environment.
+
+## Step 1 — Install 7-Zip
+
+The 7-Zip utility was installed to handle the extraction of compressed Kali Linux virtual machine files, particularly packages distributed in `.7z` format.
+
+**Utility:** 7-Zip
+**Purpose:** Extracting compressed virtual machine archives.
+
+---
+
+## Step 2 — Set Up VirtualBox
+
+Oracle VirtualBox was installed and configured to serve as the virtualization platform for hosting and managing the Kali Linux virtual machine.
+
+**Platform:** Oracle VirtualBox 7.2
+
+---
+
+## Step 3 — Configure a Private NAT Network
+
+A dedicated NAT Network was created through VirtualBox to establish a private networking environment for the cybersecurity lab.
+
+### Network Settings
+
+| Parameter           | Configuration |
+| :------------------ | :------------ |
+| Network Name        | `NatNetwork`  |
+| IPv4 Network Prefix | `10.0.0.0/24` |
+| DHCP Service        | Enabled       |
+| IPv6 Support        | Disabled      |
+| Network Mode        | NAT Network   |
+
+**Purpose:** This configuration allows virtual machines connected to the network to communicate while providing external network connectivity through NAT.
+
+---
+![]()
+
+
