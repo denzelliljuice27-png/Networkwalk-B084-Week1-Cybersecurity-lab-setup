@@ -132,6 +132,47 @@ A dedicated NAT Network was created through VirtualBox to establish a private ne
 **Purpose:** This configuration allows virtual machines connected to the network to communicate while providing external network connectivity through NAT.
 
 ---
-![]()
+![](1.PNG)
+
+### Why NAT Network Was Chosen
+
+The **NAT Network** option was selected because it allows multiple virtual machines connected to the same network to communicate with each other while maintaining outbound internet access.
+
+This setup provides a suitable foundation for future cybersecurity exercises, where attacker and target virtual machines can interact within an isolated lab environment.
+
+---
+
+## Step 4 — Import and Configure Kali Linux
+
+Kali Linux was obtained from the official Kali Linux website and imported into Oracle VirtualBox as the primary security-testing virtual machine.
+
+After importing, the virtual machine's network adapter was configured to connect to the previously created NAT Network.
+
+### Network Adapter Configuration
+
+```text
+Adapter:          Adapter 1
+Connection Type:  NAT Network
+Network Name:     NatNetwork
+Adapter Type:     Intel PRO/1000 MT Desktop (NAT)
+```
+
+### Virtual Machine Resources
+
+| Resource         | Allocation        |
+| :--------------- | :---------------- |
+| Operating System | Kali Linux 2026.2 |
+| Allocated Memory | 2048 MB (2 GB)    |
+| Network Adapter  | Adapter 1         |
+| Network Mode     | NAT Network       |
+
+**Configuration Goal:** Ensure Kali Linux is properly connected to the private lab network and ready for network testing and cybersecurity activities.
+
+![](2.PNG)
+
+A shared folder was also configured for transferring required files between the host operating system and the Kali VM.
+---
+
+
 
 
