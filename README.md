@@ -166,13 +166,30 @@ Adapter Type:     Intel PRO/1000 MT Desktop (NAT)
 | Network Adapter  | Adapter 1         |
 | Network Mode     | NAT Network       |
 
-**Configuration Goal:** Ensure Kali Linux is properly connected to the private lab network and ready for network testing and cybersecurity activities.
-
 ![](2.PNG)
 
+**Configuration Goal:** Ensure Kali Linux is properly connected to the private lab network and ready for network testing and cybersecurity activities.
+
+![](3.PNG)
+
 A shared folder was also configured for transferring required files between the host operating system and the Kali VM.
+
 ---
+## Step 5. Configure the Kali Linux Network
 
+The Kali Linux network configuration was checked and configured with a consistent IPv4 address.
 
+Example configuration:
+
+```text
+IP Address: 10.0.0.2
+Subnet Mask: 255.255.255.0
+Gateway: 10.0.0.1
+DNS: 8.8.8.8/ Use 10.0.0.1 if network gives you issues
+```
+
+A consistent IP address makes it easier to document the lab and reference the Kali machine in future exercises.
+
+![](5.PNG)
 
 
